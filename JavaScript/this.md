@@ -20,7 +20,7 @@ var boy = {
         console.log(`${this.name}今年${this.age}岁，他身高${this.height}`)
     }
 }
-boy.detail()  // 小张今年27岁，他身高178ss
+boy.detail()  // 小张今年27岁，他身高178
 ```
 
 - 硬绑定（apply、call、bind)
