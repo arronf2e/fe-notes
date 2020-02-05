@@ -18,7 +18,7 @@ Solution:
 - Map
 
 ```js
-var twoSum = function(nums, target) {
+const twoSum = function(nums, target) {
     let len = nums.length
     let map = {}
     for(let i = 0; i < len; i++) {
@@ -28,5 +28,27 @@ var twoSum = function(nums, target) {
         }
         map[nums[i]] = i
     }
+    return null
+};
+```
+
+- 双指针（适合有序数组）
+
+```js
+const twoSum = function(nums, target) {
+    let len = nums.length
+    let left = 0,
+        right = len - 1;
+    while(left < right) {
+      let sum = nums[left] + nums[right]
+      if(sum === target) {
+        return [left, right]
+      }else if(sum > target) {
+        right--
+      }else {
+        left++
+      }
+    }
+    return null
 };
 ```
